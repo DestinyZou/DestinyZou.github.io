@@ -1,69 +1,165 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cmn-Hans" lang="zh-cmn-Hans">
+<html lang="">
 <head>
-  <link href="https://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="generator" content="Hugo 0.72.0" />
+	<meta name="generator" content="Hugo 0.72.0" />
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
 
-  
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home - Zou&#39;s blogs</title>
+<meta name="description" content="">
 
-  <title>Zou&#39;s blogs</title>
-  <meta name="description" content="" />
+<link rel="alternate" type="application/rss+xml" href="https://destinyzou.github.io/index.xml" title="Zou's blogs" />
+<link rel="icon" type="image/x-icon" href="https://destinyzou.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://destinyzou.github.io/favicon.png">
 
-  
-  <link type="text/css" rel="stylesheet" href="https://destinyzou.github.io/css/print.css" media="print">
-  <link type="text/css" rel="stylesheet" href="https://destinyzou.github.io/css/poole.css">
-  <link type="text/css" rel="stylesheet" href="https://destinyzou.github.io/css/syntax.css">
-  <link type="text/css" rel="stylesheet" href="https://destinyzou.github.io/css/hyde.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+<link rel="stylesheet" href="https://destinyzou.github.io/css/style.css?rnd=1591796968" />
 
 
-  
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="/favicon.png">
 
-  
-  <link href="https://destinyzou.github.io/index.xml" rel="alternate" type="application/rss+xml" title="Zou's blogs" />
-  
+<meta property="og:title" content="Home" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://destinyzou.github.io/" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Home"/>
+<meta name="twitter:description" content=""/>
+
+
+
+
+
+
+
+
+    
 </head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Zou&#39;s blogs</a>
+</h1>
+<nav>
+    
+    
+    <a class=" active" href="https://destinyzou.github.io/" title="Home">Home</a>
+    
+</nav>
 
-  <body class=" ">
-  <aside class="sidebar">
-  <div class="container sidebar-sticky">
-    <div class="sidebar-about">
-      <a href="https://destinyzou.github.io/"><h1>Zou&#39;s blogs</h1></a>
-      <p class="lead">
-      An elegant open source and mobile first theme for <a href="http://hugo.spf13.com">hugo</a> made by <a href="http://twitter.com/mdo">@mdo</a>. Originally made for Jekyll.
-      </p>
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+    <div class="homepage-content">
+        <p>This is the home of my blog!</p>
+
     </div>
 
-    <nav>
-      <ul class="sidebar-nav">
-        <li><a href="https://destinyzou.github.io/">Home</a> </li>
-        <li><a href="/"> Homepage </a></li><li><a href="/posts/"> My Blog Homepage </a></li>
-      </ul>
-    </nav>
+    
+    
+        <article class="post-list">
+    <header>
+        <h1 class="post-title"><a href="/posts/pass-a-reference-to-a-template-typename-argument/">Pass a reference to a template typename argument</a></h1>
+    </header>
 
-    <p>&copy; 2020. All rights reserved. </p>
-  </div>
-</aside>
+    <div class="content post-summary">
+        stackoverflow
+For Example:
+template &lt;typename T&gt; struct Foo { Foo(T arg) : ptr(arg) {} T ptr; }; int main() { int* a = new int(6); } There are some ways:
+  Foo&lt;decltype(a) &amp;&gt; foo(a)
+  obscure alternative way(I do not recomand it): Foo&lt;decltype((a))&gt; foo(a)
+  using std::reference_warpper
+  Foo&lt;std::reference_warpper&lt;decltype(int*)&gt;&gt; foo(std::ref(a)); Foo&lt;std::reference_wapper&lt;decltype(a)&gt;&gt; foo(std::ref(a)); I perfer to the first way.
+    </div>
 
-    <main class="content container">
-    <div class="posts">
-<article class="post">
-  <h1 class="post-title">
-    <a href="https://destinyzou.github.io/posts/bad-night/">One Bad Night</a>
-  </h1>
-  <time datetime="0001-01-01T00:00:00Z" class="post-date">Mon, Jan 1, 0001</time>
-  Someone gave me herpes! Oh no!
-  
-</article>
+    
+    
+
+
+<div class="post-info">
+    
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://destinyzou.github.io/tags/template">#template</a></li>
+                    
+                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
+                    
+                </ul>
+        
+    </div>
 </div>
-    </main>
+
+</article>
+    
+        <article class="post-list">
+    <header>
+        <h1 class="post-title"><a href="/posts/store-reference-in-vector/">Store the reference in vector</a></h1>
+    </header>
+
+    <div class="content post-summary">
+        std::reference_warpper is frequently used as a mechamnism to store references inside standard containers(like std::vector)
+std::list&lt;int&gt; l(10); std::vector&lt;std::reference_wrapper&lt;int&gt;&gt; v(l.begin(), l.end()); std::cout &lt;&lt; &#34;contents of list before:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } std::cout &lt;&lt; std::endl; for(int&amp; i: v) { i += 2; } std::cout &lt;&lt; &#34;contents of list after:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } return 0; 
+    </div>
 
     
-      
     
-  </body>
+
+
+<div class="post-info">
+    
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
+                    
+                        <li><a href="https://destinyzou.github.io/tags/vector">#vector</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+</article>
+    
+    
+
+
+        </main>
+        <footer>
+            
+                
+                
+
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
 </html>

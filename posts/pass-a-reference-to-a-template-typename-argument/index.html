@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Pass a reference to a template typename argument - Zou&#39;s blogs</title>
+<meta name="description" content="">
+
+<link rel="icon" type="image/x-icon" href="https://destinyzou.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://destinyzou.github.io/favicon.png">
+
+<link rel="stylesheet" href="https://destinyzou.github.io/css/style.css?rnd=1591796968" />
+
+
+
+<meta property="og:title" content="Pass a reference to a template typename argument" />
+<meta property="og:description" content="stackoverflow
+For Example:
+template &lt;typename T&gt; struct Foo { Foo(T arg) : ptr(arg) {} T ptr; }; int main() { int* a = new int(6); } There are some ways:
+  Foo&lt;decltype(a) &amp;&gt; foo(a)
+  obscure alternative way(I do not recomand it): Foo&lt;decltype((a))&gt; foo(a)
+  using std::reference_warpper
+  Foo&lt;std::reference_warpper&lt;decltype(int*)&gt;&gt; foo(std::ref(a)); Foo&lt;std::reference_wapper&lt;decltype(a)&gt;&gt; foo(std::ref(a)); I perfer to the first way." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://destinyzou.github.io/posts/pass-a-reference-to-a-template-typename-argument/" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pass a reference to a template typename argument"/>
+<meta name="twitter:description" content="stackoverflow
+For Example:
+template &lt;typename T&gt; struct Foo { Foo(T arg) : ptr(arg) {} T ptr; }; int main() { int* a = new int(6); } There are some ways:
+  Foo&lt;decltype(a) &amp;&gt; foo(a)
+  obscure alternative way(I do not recomand it): Foo&lt;decltype((a))&gt; foo(a)
+  using std::reference_warpper
+  Foo&lt;std::reference_warpper&lt;decltype(int*)&gt;&gt; foo(std::ref(a)); Foo&lt;std::reference_wapper&lt;decltype(a)&gt;&gt; foo(std::ref(a)); I perfer to the first way."/>
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Zou&#39;s blogs</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="https://destinyzou.github.io/" title="Home">Home</a>
+    
+</nav>
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+
+    <article class="post">
+        <header>
+            <h1 class="post-title">Pass a reference to a template typename argument</h1>
+        </header>
+        <div class="content">
+            <p><a href="https://stackoverflow.com/questions/60849713/how-to-pass-a-reference-to-a-template-typename-argument">stackoverflow</a></p>
+<p>For Example:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++"><span style="color:#66d9ef">template</span> <span style="color:#f92672">&lt;</span><span style="color:#66d9ef">typename</span> T<span style="color:#f92672">&gt;</span>
+<span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">Foo</span>
+{
+  Foo(T arg) <span style="color:#f92672">:</span> ptr(arg) {}
+  T ptr;
+};
+
+<span style="color:#66d9ef">int</span> <span style="color:#a6e22e">main</span>() {
+  <span style="color:#66d9ef">int</span><span style="color:#f92672">*</span> a <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#66d9ef">int</span>(<span style="color:#ae81ff">6</span>);
+}
+</code></pre></div><p>There are some ways:</p>
+<ol>
+<li>
+<p><code>Foo&lt;decltype(a) &amp;&gt; foo(a)</code></p>
+</li>
+<li>
+<p>obscure alternative way(I do not recomand it): <code>Foo&lt;decltype((a))&gt; foo(a)</code></p>
+</li>
+<li>
+<p>using <a href="https://en.cppreference.com/w/cpp/utility/functional/reference%5Fwrapper">std::reference_warpper</a></p>
+</li>
+</ol>
+<!-- raw HTML omitted -->
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">Foo<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>reference_warpper<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">decltype</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">*</span>)<span style="color:#f92672">&gt;&gt;</span> foo(std<span style="color:#f92672">::</span>ref(a));
+Foo<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>reference_wapper<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">decltype</span>(a)<span style="color:#f92672">&gt;&gt;</span> foo(std<span style="color:#f92672">::</span>ref(a));
+</code></pre></div><p>I perfer to the first way.</p>
+
+        </div>
+        
+
+
+<div class="post-info">
+    
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://destinyzou.github.io/tags/template">#template</a></li>
+                    
+                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+
+    
+
+    
+
+
+        </main>
+        <footer>
+            
+                
+                
+
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

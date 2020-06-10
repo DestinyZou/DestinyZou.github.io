@@ -8,10 +8,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="referrer" content="no-referrer-when-downgrade">
 
-<title>Posts - Zou&#39;s blogs</title>
+<title>reference-wapper - Zou&#39;s blogs</title>
 <meta name="description" content="">
 
-<link rel="alternate" type="application/rss+xml" href="https://destinyzou.github.io/posts/index.xml" title="Zou's blogs" />
+<link rel="alternate" type="application/rss+xml" href="https://destinyzou.github.io/tags/reference-wapper/index.xml" title="Zou's blogs" />
 <link rel="icon" type="image/x-icon" href="https://destinyzou.github.io/favicon.ico">
 <link rel="apple-touch-icon-precomposed" href="https://destinyzou.github.io/favicon.png">
 
@@ -19,14 +19,14 @@
 
 
 
-<meta property="og:title" content="Posts" />
+<meta property="og:title" content="reference-wapper" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://destinyzou.github.io/posts/" />
+<meta property="og:url" content="https://destinyzou.github.io/tags/reference-wapper/" />
 
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:title" content="reference-wapper"/>
 <meta name="twitter:description" content=""/>
 
 
@@ -57,18 +57,28 @@
         </header>
         <main id="main" tabindex="-1"> 
             
-    <div class="index-content">
-        
+    <h1>Tag: reference-wapper</h1>
+    <div class="post-info">
+        <a href="https://destinyzou.github.io/tags">To all tags</a>
+    </div>
+    
+        <article class="post-list">
+    <header>
+        <h1 class="post-title"><a href="/posts/pass-a-reference-to-a-template-typename-argument/">Pass a reference to a template typename argument</a></h1>
+    </header>
+
+    <div class="content post-summary">
+        stackoverflow
+For Example:
+template &lt;typename T&gt; struct Foo { Foo(T arg) : ptr(arg) {} T ptr; }; int main() { int* a = new int(6); } There are some ways:
+  Foo&lt;decltype(a) &amp;&gt; foo(a)
+  obscure alternative way(I do not recomand it): Foo&lt;decltype((a))&gt; foo(a)
+  using std::reference_warpper
+  Foo&lt;std::reference_warpper&lt;decltype(int*)&gt;&gt; foo(std::ref(a)); Foo&lt;std::reference_wapper&lt;decltype(a)&gt;&gt; foo(std::ref(a)); I perfer to the first way.
     </div>
 
-    <h1 class="post-title">Posts</h1>
     
     
-        <div class="post-short-list">
-            <header> 
-                <h2 class="post-title"><a href="/posts/pass-a-reference-to-a-template-typename-argument/">Pass a reference to a template typename argument</a></h2>
-            </header>
-            
 
 
 <div class="post-info">
@@ -93,13 +103,20 @@
     </div>
 </div>
 
-        </div>
+</article>
     
-        <div class="post-short-list">
-            <header> 
-                <h2 class="post-title"><a href="/posts/store-reference-in-vector/">Store the reference in vector</a></h2>
-            </header>
-            
+        <article class="post-list">
+    <header>
+        <h1 class="post-title"><a href="/posts/store-reference-in-vector/">Store the reference in vector</a></h1>
+    </header>
+
+    <div class="content post-summary">
+        std::reference_warpper is frequently used as a mechamnism to store references inside standard containers(like std::vector)
+std::list&lt;int&gt; l(10); std::vector&lt;std::reference_wrapper&lt;int&gt;&gt; v(l.begin(), l.end()); std::cout &lt;&lt; &#34;contents of list before:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } std::cout &lt;&lt; std::endl; for(int&amp; i: v) { i += 2; } std::cout &lt;&lt; &#34;contents of list after:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } return 0; 
+    </div>
+
+    
+    
 
 
 <div class="post-info">
@@ -124,7 +141,8 @@
     </div>
 </div>
 
-        </div>
+</article>
+    
     
 
 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    
+        
+<meta charset="utf-8">
+<meta name="HandheldFriendly" content="True">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="referrer" content="no-referrer-when-downgrade">
+
+<title>Store the reference in vector - Zou&#39;s blogs</title>
+<meta name="description" content="">
+
+<link rel="icon" type="image/x-icon" href="https://destinyzou.github.io/favicon.ico">
+<link rel="apple-touch-icon-precomposed" href="https://destinyzou.github.io/favicon.png">
+
+<link rel="stylesheet" href="https://destinyzou.github.io/css/style.css?rnd=1591796968" />
+
+
+
+<meta property="og:title" content="Store the reference in vector" />
+<meta property="og:description" content="std::reference_warpper is frequently used as a mechamnism to store references inside standard containers(like std::vector)
+std::list&lt;int&gt; l(10); std::vector&lt;std::reference_wrapper&lt;int&gt;&gt; v(l.begin(), l.end()); std::cout &lt;&lt; &#34;contents of list before:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } std::cout &lt;&lt; std::endl; for(int&amp; i: v) { i &#43;= 2; } std::cout &lt;&lt; &#34;contents of list after:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } return 0; " />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://destinyzou.github.io/posts/store-reference-in-vector/" />
+
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Store the reference in vector"/>
+<meta name="twitter:description" content="std::reference_warpper is frequently used as a mechamnism to store references inside standard containers(like std::vector)
+std::list&lt;int&gt; l(10); std::vector&lt;std::reference_wrapper&lt;int&gt;&gt; v(l.begin(), l.end()); std::cout &lt;&lt; &#34;contents of list before:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } std::cout &lt;&lt; std::endl; for(int&amp; i: v) { i &#43;= 2; } std::cout &lt;&lt; &#34;contents of list after:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } return 0; "/>
+
+
+
+
+
+
+
+
+    
+</head>
+<body>
+    <a class="skip-main" href="#main">Skip to main content</a>
+    <div class="container">
+        <header> 
+            
+                <h1 class="site-header">
+    <a href="/">Zou&#39;s blogs</a>
+</h1>
+<nav>
+    
+    
+    <a class="" href="https://destinyzou.github.io/" title="Home">Home</a>
+    
+</nav>
+
+            
+        </header>
+        <main id="main" tabindex="-1"> 
+            
+
+    <article class="post">
+        <header>
+            <h1 class="post-title">Store the reference in vector</h1>
+        </header>
+        <div class="content">
+            <p><code>std::reference_warpper</code> is frequently used as a mechamnism to store references inside standard containers(like <code>std::vector</code>)</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-C++" data-lang="C++">std<span style="color:#f92672">::</span>list<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;</span> l(<span style="color:#ae81ff">10</span>);
+std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>reference_wrapper<span style="color:#f92672">&lt;</span><span style="color:#66d9ef">int</span><span style="color:#f92672">&gt;&gt;</span> v(l.begin(), l.end());
+std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;contents of list before:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> n : l) {
+  std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+}
+std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span><span style="color:#f92672">&amp;</span> i: v) {
+  i <span style="color:#f92672">+=</span> <span style="color:#ae81ff">2</span>;
+}
+
+std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34;contents of list after:&#34;</span> <span style="color:#f92672">&lt;&lt;</span> std<span style="color:#f92672">::</span>endl;
+<span style="color:#66d9ef">for</span>(<span style="color:#66d9ef">int</span> n : l) {
+  std<span style="color:#f92672">::</span>cout <span style="color:#f92672">&lt;&lt;</span> n <span style="color:#f92672">&lt;&lt;</span> <span style="color:#e6db74">&#34; &#34;</span>;
+}
+<span style="color:#66d9ef">return</span> <span style="color:#ae81ff">0</span>;
+</code></pre></div>
+        </div>
+        
+
+
+<div class="post-info">
+    
+    <div class="post-taxonomies">
+        
+            <ul class="post-categories">
+                
+                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
+                
+            </ul>
+            
+            
+                <ul class="post-tags">
+                    
+                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
+                    
+                        <li><a href="https://destinyzou.github.io/tags/vector">#vector</a></li>
+                    
+                </ul>
+        
+    </div>
+</div>
+
+    </article>
+
+    
+
+    
+
+
+        </main>
+        <footer>
+            
+                
+                
+
+                <p>© 2020<br>
+Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
+</p>
+            
+        </footer>
+    </div>
+</body>
+</html>

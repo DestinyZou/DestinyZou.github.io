@@ -7,7 +7,15 @@
   </url>
   
   <url>
+    <loc>https://destinyzou.github.io/categories/cpp/</loc>
+  </url>
+  
+  <url>
     <loc>https://destinyzou.github.io/</loc>
+  </url>
+  
+  <url>
+    <loc>https://destinyzou.github.io/posts/pass-a-reference-to-a-template-typename-argument/</loc>
   </url>
   
   <url>
@@ -15,11 +23,23 @@
   </url>
   
   <url>
-    <loc>https://destinyzou.github.io/posts/bad-night/</loc>
+    <loc>https://destinyzou.github.io/tags/reference-wapper/</loc>
+  </url>
+  
+  <url>
+    <loc>https://destinyzou.github.io/posts/store-reference-in-vector/</loc>
   </url>
   
   <url>
     <loc>https://destinyzou.github.io/tags/</loc>
+  </url>
+  
+  <url>
+    <loc>https://destinyzou.github.io/tags/template/</loc>
+  </url>
+  
+  <url>
+    <loc>https://destinyzou.github.io/tags/vector/</loc>
   </url>
   
 </urlset>

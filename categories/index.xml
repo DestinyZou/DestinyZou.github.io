@@ -1,13 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Categories on Zou&#39;s blogs</title>
+    <title>Categories on 卓辉的博客</title>
     <link>https://destinyzou.github.io/categories/</link>
-    <description>Zou&#39;s blogs (Categories)</description>
+    <description>Recent content in Categories on 卓辉的博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Jun 2020 23:58:00 +0800</lastBuildDate>
     
-    <atom:link href="https://destinyzou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://destinyzou.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>cpp</title>
+      <link>https://destinyzou.github.io/categories/cpp/</link>
+      <pubDate>Wed, 10 Jun 2020 23:58:00 +0800</pubDate>
+      
+      <guid>https://destinyzou.github.io/categories/cpp/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

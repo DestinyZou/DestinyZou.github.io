@@ -1,49 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>template on Zou&#39;s blogs</title>
+    <title>template on 卓辉的博客</title>
     <link>https://destinyzou.github.io/tags/template/</link>
-    <description>Zou&#39;s blogs (template)</description>
+    <description>Recent content in template on 卓辉的博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Jun 2020 23:58:00 +0800</lastBuildDate>
     
-    <atom:link href="https://destinyzou.github.io/tags/template/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://destinyzou.github.io/tags/template/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Pass a reference to a template typename argument</title>
-      <link>https://destinyzou.github.io/posts/pass-a-reference-to-a-template-typename-argument/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <link>https://destinyzou.github.io/post/Notes/Pass-a-reference-to-a-template-typename-argument/</link>
+      <pubDate>Wed, 10 Jun 2020 23:58:00 +0800</pubDate>
       
-      <guid>https://destinyzou.github.io/posts/pass-a-reference-to-a-template-typename-argument/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/60849713/how-to-pass-a-reference-to-a-template-typename-argument&#34;&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;For Example:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;template&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;typename&lt;/span&gt; T&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;span style=&#34;color:#66d9ef&#34;&gt;struct&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Foo&lt;/span&gt;
-{
-  Foo(T arg) &lt;span style=&#34;color:#f92672&#34;&gt;:&lt;/span&gt; ptr(arg) {}
-  T ptr;
-};
-
-&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;main&lt;/span&gt;() {
-  &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; a &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;new&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;(&lt;span style=&#34;color:#ae81ff&#34;&gt;6&lt;/span&gt;);
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;There are some ways:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;code&gt;Foo&amp;lt;decltype(a) &amp;amp;&amp;gt; foo(a)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;obscure alternative way(I do not recomand it): &lt;code&gt;Foo&amp;lt;decltype((a))&amp;gt; foo(a)&lt;/code&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;using &lt;a href=&#34;https://en.cppreference.com/w/cpp/utility/functional/reference%5Fwrapper&#34;&gt;std::reference_warpper&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;!-- raw HTML omitted --&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4&#34;&gt;&lt;code class=&#34;language-C++&#34; data-lang=&#34;C++&#34;&gt;Foo&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;reference_warpper&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;decltype&lt;/span&gt;(&lt;span style=&#34;color:#66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt;)&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; foo(std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ref(a));
-Foo&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;reference_wapper&lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;decltype&lt;/span&gt;(a)&lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; foo(std&lt;span style=&#34;color:#f92672&#34;&gt;::&lt;/span&gt;ref(a));
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I perfer to the first way.&lt;/p&gt;
-</description>
+      <guid>https://destinyzou.github.io/post/Notes/Pass-a-reference-to-a-template-typename-argument/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://stackoverflow.com/questions/60849713/how-to-pass-a-reference-to-a-template-typename-argument&#34;&gt;stackoverflow: How to pass a reference to template typename argument&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>

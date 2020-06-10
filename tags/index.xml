@@ -1,13 +1,51 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Zou&#39;s blogs</title>
+    <title>Tags on 卓辉的博客</title>
     <link>https://destinyzou.github.io/tags/</link>
-    <description>Zou&#39;s blogs (Tags)</description>
+    <description>Recent content in Tags on 卓辉的博客</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Wed, 10 Jun 2020 23:58:00 +0800</lastBuildDate>
     
-    <atom:link href="https://destinyzou.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://destinyzou.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>reference-wapper</title>
+      <link>https://destinyzou.github.io/tags/reference-wapper/</link>
+      <pubDate>Wed, 10 Jun 2020 23:58:00 +0800</pubDate>
+      
+      <guid>https://destinyzou.github.io/tags/reference-wapper/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>template</title>
+      <link>https://destinyzou.github.io/tags/template/</link>
+      <pubDate>Wed, 10 Jun 2020 23:58:00 +0800</pubDate>
+      
+      <guid>https://destinyzou.github.io/tags/template/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vector</title>
+      <link>https://destinyzou.github.io/tags/vector/</link>
+      <pubDate>Wed, 10 Jun 2020 23:58:00 +0800</pubDate>
+      
+      <guid>https://destinyzou.github.io/tags/vector/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>头痛</title>
+      <link>https://destinyzou.github.io/tags/%E5%A4%B4%E7%97%9B/</link>
+      <pubDate>Wed, 10 Jun 2020 22:41:00 +0800</pubDate>
+      
+      <guid>https://destinyzou.github.io/tags/%E5%A4%B4%E7%97%9B/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

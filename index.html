@@ -1,165 +1,231 @@
-<!DOCTYPE html>
-<html lang="">
+<!doctype html>
+<html lang="zh-CN">
 <head>
 	<meta name="generator" content="Hugo 0.72.0" />
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>卓辉的博客 | </title>
+    <meta property="og:title" content="卓辉的博客 | ">
+    <meta property="og:type" content="website">
+    <meta name="Keywords" content="">
+    <meta name="description" content="">
+    <meta property="og:url" content="https://destinyzou.github.io/">
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href='/css/normalize.css'>
+    <link rel="stylesheet" href='/css/style.css'>
+    <link rel="alternate" type="application/rss+xml+xml" href="https://destinyzou.github.io/index.xml" title="卓辉的博客" />
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
     
-        
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="referrer" content="no-referrer-when-downgrade">
-
-<title>Home - Zou&#39;s blogs</title>
-<meta name="description" content="">
-
-<link rel="alternate" type="application/rss+xml" href="https://destinyzou.github.io/index.xml" title="Zou's blogs" />
-<link rel="icon" type="image/x-icon" href="https://destinyzou.github.io/favicon.ico">
-<link rel="apple-touch-icon-precomposed" href="https://destinyzou.github.io/favicon.png">
-
-<link rel="stylesheet" href="https://destinyzou.github.io/css/style.css?rnd=1591796968" />
 
 
-
-<meta property="og:title" content="Home" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://destinyzou.github.io/" />
-
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Home"/>
-<meta name="twitter:description" content=""/>
-
-
-
-
-
-
-
-
+    
     
 </head>
+
+
 <body>
-    <a class="skip-main" href="#main">Skip to main content</a>
+    <header id="header" class="clearfix">
     <div class="container">
-        <header> 
-            
-                <h1 class="site-header">
-    <a href="/">Zou&#39;s blogs</a>
-</h1>
-<nav>
-    
-    
-    <a class=" active" href="https://destinyzou.github.io/" title="Home">Home</a>
-    
-</nav>
+        <div class="col-group">
+            <div class="site-name ">
+                
+                    <h1>
+                        <a id="logo" href="https://destinyzou.github.io/">
+                            卓辉的博客
+                        </a>
+                    </h1>
+                
+                
+            </div>
+            <div>
+                <nav id="nav-menu" class="clearfix">
+                    <a class="current" href="https://destinyzou.github.io/">首页</a>
+                    
+                    <a  href="https://destinyzou.github.io/tags/" title="Tags">Tags</a>
+                    
+                    <a  href="https://destinyzou.github.io/categories/" title="Categories">Categories</a>
+                    
+                    <a  href="https://destinyzou.github.io/post/Live/" title="Live">Live</a>
+                    
+                    <a  href="https://destinyzou.github.io/post/Notes/" title="Notes">Notes</a>
+                    
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
 
-            
+    <div id="body">
+        <div class="container">
+            <div class="col-group">
+
+                <div class="col-8" id="main">
+                    
+<div class="res-cons">
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://destinyzou.github.io/post/Notes/Pass-a-reference-to-a-template-typename-argument/" title="Pass a reference to a template typename argument">Pass a reference to a template typename argument</a>
+            </h1>
         </header>
-        <main id="main" tabindex="-1"> 
-            
-    <div class="homepage-content">
-        <p>This is the home of my blog!</p>
-
-    </div>
-
-    
-    
-        <article class="post-list">
-    <header>
-        <h1 class="post-title"><a href="/posts/pass-a-reference-to-a-template-typename-argument/">Pass a reference to a template typename argument</a></h1>
-    </header>
-
-    <div class="content post-summary">
-        stackoverflow
-For Example:
-template &lt;typename T&gt; struct Foo { Foo(T arg) : ptr(arg) {} T ptr; }; int main() { int* a = new int(6); } There are some ways:
-  Foo&lt;decltype(a) &amp;&gt; foo(a)
-  obscure alternative way(I do not recomand it): Foo&lt;decltype((a))&gt; foo(a)
-  using std::reference_warpper
-  Foo&lt;std::reference_warpper&lt;decltype(int*)&gt;&gt; foo(std::ref(a)); Foo&lt;std::reference_wapper&lt;decltype(a)&gt;&gt; foo(std::ref(a)); I perfer to the first way.
-    </div>
-
-    
-    
-
-
-<div class="post-info">
-    
-    <div class="post-taxonomies">
+        <date class="post-meta meta-date">
+            2020年6月10日
+        </date>
         
-            <ul class="post-categories">
-                
-                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
-                
-            </ul>
+        <div class="post-meta">
+            <span>|</span>
             
+            <span class="meta-category"><a href='https://destinyzou.github.io/categories/cpp'>cpp</a></span>
             
-                <ul class="post-tags">
-                    
-                        <li><a href="https://destinyzou.github.io/tags/template">#template</a></li>
-                    
-                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
-                    
-                </ul>
+        </div>
         
-    </div>
+        <div class="post-content">
+            <p><a href="https://stackoverflow.com/questions/60849713/how-to-pass-a-reference-to-a-template-typename-argument">stackoverflow: How to pass a reference to template typename argument</a></p>……
+        </div>
+        <p class="readmore"><a href="https://destinyzou.github.io/post/Notes/Pass-a-reference-to-a-template-typename-argument/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://destinyzou.github.io/post/Notes/Store-reference-in-vector/" title="Store the reference in vector">Store the reference in vector</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月10日
+        </date>
+        
+        <div class="post-meta">
+            <span>|</span>
+            
+            <span class="meta-category"><a href='https://destinyzou.github.io/categories/cpp'>cpp</a></span>
+            
+        </div>
+        
+        <div class="post-content">
+            <p><code>std::reference_warpper</code> is frequently used as a mechamnism to store references inside standard containers(like <code>std::vector</code>)</p>……
+        </div>
+        <p class="readmore"><a href="https://destinyzou.github.io/post/Notes/Store-reference-in-vector/">阅读全文</a></p>
+    </article>
+    
+    <article class="post">
+        <header>
+            <h1 class="post-title">
+                <a href="https://destinyzou.github.io/post/Live/%E5%A4%B4%E7%97%9B%E6%97%A5%E8%AE%B0/" title="头痛日记">头痛日记</a>
+            </h1>
+        </header>
+        <date class="post-meta meta-date">
+            2020年6月10日
+        </date>
+        
+        <div class="post-content">
+            昨日父亲让我今日去工地帮忙，我答应了。 今日太阳特别猛烈，晒得我直发昏。之前跟父亲来过一次，也是来帮忙，那次只带了安 全帽，还穿了短袖上衣，手臂和后颈都晒伤了。而且回去后头痛发作，痛得厉害。所以 这次特意穿了长袖衣和长裤，还戴了草帽。 工作很简单，但太阳实在太毒辣了，哪怕这次全副武装，我……
+        </div>
+        <p class="readmore"><a href="https://destinyzou.github.io/post/Live/%E5%A4%B4%E7%97%9B%E6%97%A5%E8%AE%B0/">阅读全文</a></p>
+    </article>
+    
+    
+
+
+
+
+
 </div>
 
-</article>
-    
-        <article class="post-list">
-    <header>
-        <h1 class="post-title"><a href="/posts/store-reference-in-vector/">Store the reference in vector</a></h1>
-    </header>
+                </div>
 
-    <div class="content post-summary">
-        std::reference_warpper is frequently used as a mechamnism to store references inside standard containers(like std::vector)
-std::list&lt;int&gt; l(10); std::vector&lt;std::reference_wrapper&lt;int&gt;&gt; v(l.begin(), l.end()); std::cout &lt;&lt; &#34;contents of list before:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } std::cout &lt;&lt; std::endl; for(int&amp; i: v) { i += 2; } std::cout &lt;&lt; &#34;contents of list after:&#34; &lt;&lt; std::endl; for(int n : l) { std::cout &lt;&lt; n &lt;&lt; &#34; &#34;; } return 0; 
-    </div>
+                <div id="secondary">
+    <section class="widget">
+        <form id="search" action='//www.google.com/search' method="get" accept-charset="utf-8" target="_blank" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+      <input type="hidden" name="sitesearch" value="https://destinyzou.github.io/">
+      <button type="submit" class="submit icon-search"></button>
+</form>
+    </section>
+    
+    <section class="widget">
+        <h3 class="widget-title">最近文章</h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://destinyzou.github.io/post/Notes/Pass-a-reference-to-a-template-typename-argument/" title="Pass a reference to a template typename argument">Pass a reference to a template typename argument</a>
+    </li>
+    
+    <li>
+        <a href="https://destinyzou.github.io/post/Notes/Store-reference-in-vector/" title="Store the reference in vector">Store the reference in vector</a>
+    </li>
+    
+    <li>
+        <a href="https://destinyzou.github.io/post/Live/%E5%A4%B4%E7%97%9B%E6%97%A5%E8%AE%B0/" title="头痛日记">头痛日记</a>
+    </li>
+    
+</ul>
+    </section>
 
     
-    
 
-
-<div class="post-info">
+    <section class="widget">
+        <h3 class="widget-title">分类</h3>
+<ul class="widget-list">
     
-    <div class="post-taxonomies">
-        
-            <ul class="post-categories">
-                
-                    <li><a href="https://destinyzou.github.io/categories/cpp">cpp</a></li>
-                
-            </ul>
-            
-            
-                <ul class="post-tags">
-                    
-                        <li><a href="https://destinyzou.github.io/tags/reference-wapper">#reference-wapper</a></li>
-                    
-                        <li><a href="https://destinyzou.github.io/tags/vector">#vector</a></li>
-                    
-                </ul>
-        
-    </div>
+    <li><a href="https://destinyzou.github.io/categories/cpp/">cpp (2)</a></li>
+    
+</ul>
+    </section>
+
+    <section class="widget">
+        <h3 class="widget-title">标签</h3>
+<div class="tagcloud">
+    
+    <a href="https://destinyzou.github.io/tags/reference-wapper/">reference-wapper</a>
+    
+    <a href="https://destinyzou.github.io/tags/template/">template</a>
+    
+    <a href="https://destinyzou.github.io/tags/vector/">vector</a>
+    
+    <a href="https://destinyzou.github.io/tags/%E5%A4%B4%E7%97%9B/">头痛</a>
+    
 </div>
+    </section>
 
-</article>
     
-    
 
-
-        </main>
-        <footer>
-            
-                
-                
-
-                <p>© 2020<br>
-Powered by <a target="_blank" href="https://gohugo.io/">Hugo</a>, theme <a target="_blank" href="https://github.com/mitrichius/hugo-theme-anubis">Anubis</a>.
-</p>
-            
-        </footer>
+    <section class="widget">
+        <h3 class="widget-title">其它</h3>
+        <ul class="widget-list">
+            <li><a href="https://destinyzou.github.io/index.xml">文章 RSS</a></li>
+        </ul>
+    </section>
+</div>
+            </div>
+        </div>
     </div>
+    <footer id="footer">
+    <div class="container">
+        &copy; 2020 <a href="https://destinyzou.github.io/">卓辉的博客 By zhuohui</a>.
+        Powered by <a rel="nofollow noreferer noopener" href="https://gohugo.io" target="_blank">Hugo</a>.
+        <a href="https://www.flysnow.org/" target="_blank">Theme</a> based on <a href="https://github.com/flysnow-org/maupassant-hugo" target="_blank">maupassant</a>.
+        
+    </div>
+</footer>
+
+
+
+<a id="rocket" href="#top"></a>
+<script type="text/javascript" src='/js/totop.js?v=0.0.0' async=""></script>
+
+
+
+
+
+
 </body>
+
 </html>
